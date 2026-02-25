@@ -5,7 +5,7 @@ import { Code, Palette, Rocket, Sparkles, Terminal, Zap } from 'lucide-react';
 import { ImageWithFallback } from '../../figma/ImageWithFallback';
 
 // ✅ FIXED IMAGE IMPORT (Correct Vite method)
-import profileImage from '../../../assets/images/profile3.png.jpeg';
+import profileImage from '../assets/images/profile3.png.jpeg';
 
 export function HomePage() {
   const navigate = useNavigate();
