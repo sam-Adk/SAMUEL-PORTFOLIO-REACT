@@ -4,8 +4,8 @@ import { Button } from '../../ui/button';
 import { Code, Palette, Rocket, Sparkles, Terminal, Zap } from 'lucide-react';
 import { ImageWithFallback } from '../../figma/ImageWithFallback';
 
-// ✅ FIXED IMAGE IMPORT (Correct Vite method)
-import profileImage from '../assets/images/profile3.png.jpeg';
+// ✅ Correct import for the renamed image
+import profileImage from '../../../assets/images/profile3.jpeg';
 
 export function HomePage() {
   const navigate = useNavigate();
@@ -24,7 +24,6 @@ export function HomePage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
         <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.5))] -z-10" />
-        
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
@@ -42,17 +41,17 @@ export function HomePage() {
               >
                 <span className="text-indigo-600">👋 Hello, I'm Samuel Adikah</span>
               </motion.div>
-              
+
               <h1 className="mb-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                 Creative Developer & Digital Craftsperson
               </h1>
-              
+
               <p className="mb-8 text-slate-600 max-w-xl">
                 I transform ideas into beautiful, functional digital experiences. 
                 Specializing in modern web development, intuitive design, and 
                 scalable solutions that make an impact.
               </p>
-              
+
               <div className="flex flex-wrap gap-4">
                 <Button
                   size="lg"
@@ -82,14 +81,14 @@ export function HomePage() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 to-purple-600/20 z-10" />
 
-                {/* ✅ FIXED IMAGE USAGE */}
+                {/* ✅ Fixed Image */}
                 <ImageWithFallback
                   src={profileImage}
                   alt="Profile"
                   className="w-full h-[500px] object-cover"
                 />
               </div>
-              
+
               {/* Floating Status */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
