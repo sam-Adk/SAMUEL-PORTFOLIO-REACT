@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '../../ui/button';
 import { Code, Palette, Rocket, Sparkles, Terminal, Zap } from 'lucide-react';
 import { ImageWithFallback } from '../../figma/ImageWithFallback';
-import profileImage from '../../../assets/images/profile3.png.jpeg';
+import profileImage from '../assets/images/profile3.png.jpeg';
 
 export function HomePage() {
   const navigate = useNavigate();
