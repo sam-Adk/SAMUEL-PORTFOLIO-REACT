@@ -1,9 +1,8 @@
-import { motion } from 'motion/react';
+its this profile3.png.jpeg                                         import { motion } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../../ui/button';
 import { Code, Palette, Rocket, Sparkles, Terminal, Zap } from 'lucide-react';
 import { ImageWithFallback } from '../../figma/ImageWithFallback';
-import profileImage from '../assets/images/profile3.png.jpeg';
 
 export function HomePage() {
   const navigate = useNavigate();
@@ -79,7 +78,7 @@ export function HomePage() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 to-purple-600/20 z-10" />
                 <ImageWithFallback
-                  src={profileImage}
+                  src="src/assets/images/profile3.png.jpeg"
                   alt="Profile"
                   className="w-full h-[500px] object-cover"
                 />
