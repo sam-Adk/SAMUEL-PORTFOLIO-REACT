@@ -1,8 +1,11 @@
-its this profile3.png.jpeg                                         import { motion } from 'motion/react';
+import { motion } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../../ui/button';
 import { Code, Palette, Rocket, Sparkles, Terminal, Zap } from 'lucide-react';
 import { ImageWithFallback } from '../../figma/ImageWithFallback';
+
+// ✅ FIXED IMAGE IMPORT (Correct Vite method)
+import profileImage from '../../../assets/images/profile3.png.jpeg';
 
 export function HomePage() {
   const navigate = useNavigate();
@@ -24,6 +27,7 @@ export function HomePage() {
         
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
             {/* Text Content */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -77,14 +81,16 @@ export function HomePage() {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 to-purple-600/20 z-10" />
+
+                {/* ✅ FIXED IMAGE USAGE */}
                 <ImageWithFallback
-                  src="src/assets/images/profile3.png.jpeg"
+                  src={profileImage}
                   alt="Profile"
                   className="w-full h-[500px] object-cover"
                 />
               </div>
               
-              {/* Floating Elements */}
+              {/* Floating Status */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
@@ -96,6 +102,7 @@ export function HomePage() {
                 </div>
               </motion.div>
             </motion.div>
+
           </div>
         </div>
       </section>
