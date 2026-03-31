@@ -68,17 +68,17 @@ export function ProjectsPage() {
       longDescription: 'This project is built using pure HTML, CSS, and JavaScript, without any frameworks.It demonstrates how to create an elegant and interactive art store interface — complete with product listings, a working shopping cart, and toast notifications — all styled around a moody, late-night aesthetic.',
       image: 'https://images.unsplash.com/photo-1621743018966-29194999d736?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBkZXNrfGVufDF8fHx8MTc2MzE2NTk5OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       tags: ['React Native', 'Express', 'Chart.js', 'AWS'],
-      link: 'https://late-night-epiphanies.onrender.com/',
+      link: 'https://late-night-epiphanies-shop.onrender.com',
       github: 'https://github.com'
     },
     {
       id: 6,
-      title: 'Social Analytics Tool',
-      description: 'Advanced analytics platform for social media marketers',
-      longDescription: 'Developed a powerful analytics platform that aggregates data from multiple social media platforms, providing detailed insights, competitor analysis, and automated reporting. Helps marketers make data-driven decisions and optimize their social media strategy.',
+      title: 'CyberWatch-Kenya',
+      description: 'Built and managed a cybersecurity newsletter platform with 1000+ subscribers',
+      longDescription: 'Built and managed a cybersecurity newsletter platform with 1000+ subscribers',
       image: 'https://images.unsplash.com/photo-1750056393331-82e69d28c9d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXNpZ24lMjBtb2NrdXB8ZW58MXx8fHwxNzYzMTExNjIwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       tags: ['Angular', 'Django', 'Redis', 'GraphQL'],
-      link: 'https://example.com',
+      link: 'https://cyberwatch-kenya.onrender.com',
       github: 'https://github.com'
     },
   ];
