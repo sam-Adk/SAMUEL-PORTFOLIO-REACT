@@ -29,7 +29,7 @@ export function ProjectsPage() {
       image: 'https://images.unsplash.com/photo-1750056393331-82e69d28c9d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXNpZ24lMjBtb2NrdXB8ZW58MXx8fHwxNzYzMTExNjIwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
       link: 'https://e-commerce-product-catalog-2xk2.onrender.com/',
-      github: 'https://github.com'
+      github: 'https://github.com/sam-Adk'
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ export function ProjectsPage() {
       image: 'https://images.unsplash.com/photo-1605108222700-0d605d9ebafe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzYzMTQ5NTgwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       tags: ['TypeScript', 'Next.js', 'MongoDB', 'WebSocket'],
       link: 'https://my-portfolio-8f1u.onrender.com/',
-      github: 'https://github.com'
+      github: 'https://github.com/sam-Adk'
     },
     {
       id: 3,
@@ -49,7 +49,7 @@ export function ProjectsPage() {
       image: 'https://images.unsplash.com/photo-1603351130949-476794ec3dff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjBzY3JlZW4lMjBsYXB0b3B8ZW58MXx8fHwxNzYzMjAzNjQwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       tags: ['Python', 'React', 'OpenAI', 'FastAPI'],
       link: 'https://mood-movie-recommendor.onrender.com/',
-      github: 'https://github.com'
+      github: 'https://github.com/sam-Adk'
     },
     {
       id: 4,
@@ -59,7 +59,7 @@ export function ProjectsPage() {
       image: 'https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNzYzMTg3ODIyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       tags: ['Vue.js', 'Tailwind', 'Firebase', 'Cloudflare'],
       link: 'https://example.com',
-      github: 'https://github.com'
+      github: 'https://github.com/sam-Adk'
     },
     {
       id: 5,
@@ -69,7 +69,7 @@ export function ProjectsPage() {
       image: 'https://images.unsplash.com/photo-1621743018966-29194999d736?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBkZXNrfGVufDF8fHx8MTc2MzE2NTk5OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       tags: ['React Native', 'Express', 'Chart.js', 'AWS'],
       link: 'https://late-night-epiphanies-shop.onrender.com',
-      github: 'https://github.com'
+      github: 'https://github.com/sam-Adk'
     },
     {
       id: 6,
@@ -79,7 +79,7 @@ export function ProjectsPage() {
       image: 'https://images.unsplash.com/photo-1750056393331-82e69d28c9d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXNpZ24lMjBtb2NrdXB8ZW58MXx8fHwxNzYzMTExNjIwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
       tags: ['Angular', 'Django', 'Redis', 'GraphQL'],
       link: 'https://cyberwatch-kenya.onrender.com',
-      github: 'https://github.com'
+      github: 'https://github.com/sam-Adk'
     },
   ];
 
