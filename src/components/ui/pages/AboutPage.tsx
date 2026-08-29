@@ -2,15 +2,7 @@
 import { motion } from 'motion/react';
 import { Badge } from '../../ui/badge';
 import { Progress } from '../../ui/progress';
-import {
-  Calendar,
-  MapPin,
-  Award,
-  Briefcase,
-  Code2,
-  Database,
-  Cloud,
-} from 'lucide-react';
+import { MapPin, Award, Briefcase } from 'lucide-react';
 import { ImageWithFallback } from '../../figma/ImageWithFallback';
 
 export function AboutPage() {
