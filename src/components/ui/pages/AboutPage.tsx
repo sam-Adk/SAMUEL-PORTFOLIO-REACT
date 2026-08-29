@@ -75,7 +75,7 @@ export function AboutPage() {
 
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
             <ImageWithFallback
-  src="/TWONIGGAS.jpeg"
+  src="/src/assets/images/TWONIGGAS.jpeg"
   alt="Samuel Adikah"
   className="w-full h-[480px] object-cover"
 />
