@@ -1,3 +1,4 @@
+
 import { motion } from 'motion/react';
 import { Badge } from '../../ui/badge';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
@@ -100,8 +101,9 @@ export function BlogPage() {
   ];
 
   return (
-    <div className="py-16">
+    <div className="py-16 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -109,7 +111,11 @@ export function BlogPage() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h1 className="mb-4 text-4xl md:text-5xl font-bold">
+          <p className="text-sm font-semibold uppercase tracking-widest text-teal-700 mb-3">
+            Insights & Articles
+          </p>
+
+          <h1 className="mb-4 text-4xl md:text-5xl font-bold text-slate-900">
             Blog
           </h1>
 
@@ -132,8 +138,8 @@ export function BlogPage() {
               variant={category === 'All' ? 'default' : 'outline'}
               className={
                 category === 'All'
-                  ? 'rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700'
-                  : 'rounded-full hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-300'
+                  ? 'rounded-full bg-teal-700 hover:bg-teal-800 text-white'
+                  : 'rounded-full border-slate-300 text-slate-700 hover:bg-teal-50 hover:text-teal-700 hover:border-teal-300'
               }
             >
               {category}
@@ -148,8 +154,10 @@ export function BlogPage() {
           transition={{ delay: 0.2 }}
           className="mb-16"
         >
-          <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-3xl overflow-hidden border border-indigo-100 shadow-lg hover:shadow-xl transition-shadow">
+          <div className="bg-gradient-to-br from-teal-50 to-slate-50 rounded-3xl overflow-hidden border border-teal-100 shadow-lg hover:shadow-xl transition-shadow">
             <div className="grid grid-cols-1 lg:grid-cols-2">
+
+              {/* Featured Image */}
               <div className="relative h-72 lg:h-full min-h-[420px]">
                 <ImageWithFallback
                   src={posts[0].image}
@@ -159,20 +167,22 @@ export function BlogPage() {
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
-                <Badge className="absolute top-5 left-5 bg-indigo-600 text-white">
+                <Badge className="absolute top-5 left-5 bg-teal-700 text-white border-0">
                   Featured
                 </Badge>
               </div>
 
+              {/* Featured Content */}
               <div className="p-8 lg:p-12 flex flex-col justify-center">
+
                 <Badge
                   variant="secondary"
-                  className="w-fit mb-4 bg-white"
+                  className="w-fit mb-4 bg-white text-teal-700 border border-teal-100"
                 >
                   {posts[0].category}
                 </Badge>
 
-                <h2 className="mb-4 text-2xl md:text-3xl font-bold">
+                <h2 className="mb-4 text-2xl md:text-3xl font-bold text-slate-900">
                   {posts[0].title}
                 </h2>
 
@@ -181,6 +191,7 @@ export function BlogPage() {
                 </p>
 
                 <div className="flex flex-wrap items-center gap-6 mb-6 text-slate-500">
+
                   <div className="flex items-center gap-2">
                     <Calendar size={16} />
                     <span>{posts[0].date}</span>
@@ -190,12 +201,14 @@ export function BlogPage() {
                     <Clock size={16} />
                     <span>{posts[0].readTime}</span>
                   </div>
+
                 </div>
 
-                <Button className="w-fit bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full">
+                <Button className="w-fit bg-teal-700 hover:bg-teal-800 text-white rounded-lg">
                   Read Article
                   <ArrowRight size={18} className="ml-2" />
                 </Button>
+
               </div>
             </div>
           </div>
@@ -203,6 +216,7 @@ export function BlogPage() {
 
         {/* Blog Posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
           {posts.slice(1).map((post, index) => (
             <motion.article
               key={post.id}
@@ -212,8 +226,10 @@ export function BlogPage() {
               whileHover={{ y: -8 }}
               className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer group"
             >
+
               {/* Image */}
               <div className="relative h-52 overflow-hidden">
+
                 <ImageWithFallback
                   src={post.image}
                   alt={post.title}
@@ -224,15 +240,17 @@ export function BlogPage() {
 
                 <Badge
                   variant="secondary"
-                  className="absolute top-4 right-4 bg-white"
+                  className="absolute top-4 right-4 bg-white text-teal-700 border border-teal-100"
                 >
                   {post.category}
                 </Badge>
+
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="mb-3 text-xl font-semibold line-clamp-2 group-hover:text-indigo-600 transition-colors">
+
+                <h3 className="mb-3 text-xl font-semibold text-slate-900 line-clamp-2 group-hover:text-teal-700 transition-colors">
                   {post.title}
                 </h3>
 
@@ -241,6 +259,7 @@ export function BlogPage() {
                 </p>
 
                 <div className="flex flex-wrap items-center gap-4 mb-5 text-slate-500">
+
                   <div className="flex items-center gap-1">
                     <Calendar size={14} />
                     <span className="text-sm">{post.date}</span>
@@ -250,9 +269,12 @@ export function BlogPage() {
                     <Clock size={14} />
                     <span className="text-sm">{post.readTime}</span>
                   </div>
+
                 </div>
 
+                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-5">
+
                   {post.tags.map((tag) => (
                     <Badge
                       key={tag}
@@ -262,21 +284,26 @@ export function BlogPage() {
                       {tag}
                     </Badge>
                   ))}
+
                 </div>
 
+                {/* Read More */}
                 <Button
                   variant="ghost"
-                  className="w-full justify-between group-hover:bg-indigo-50 group-hover:text-indigo-700"
+                  className="w-full justify-between text-slate-700 group-hover:bg-teal-50 group-hover:text-teal-700"
                 >
                   Read More
+
                   <ArrowRight
                     size={16}
                     className="group-hover:translate-x-1 transition-transform"
                   />
                 </Button>
+
               </div>
             </motion.article>
           ))}
+
         </div>
 
         {/* Newsletter */}
@@ -285,30 +312,39 @@ export function BlogPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mt-20 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-3xl p-8 lg:p-12 text-center text-white shadow-xl"
+          className="mt-20 bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900 rounded-3xl p-8 lg:p-12 text-center text-white shadow-xl"
         >
+
+          <p className="text-sm font-semibold uppercase tracking-widest text-teal-400 mb-3">
+            Stay Updated
+          </p>
+
           <h2 className="mb-4 text-white text-3xl font-bold">
             Subscribe to My Newsletter
           </h2>
 
-          <p className="mb-8 text-indigo-100 max-w-2xl mx-auto">
+          <p className="mb-8 text-slate-300 max-w-2xl mx-auto">
             Get the latest articles, tutorials, and insights delivered
             straight to your inbox. No spam, unsubscribe anytime.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-5 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50 backdrop-blur-sm"
+              className="flex-1 px-5 py-3 rounded-full bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-teal-400 backdrop-blur-sm"
             />
 
-            <Button className="bg-white text-indigo-600 hover:bg-slate-100 rounded-full px-8">
+            <Button className="bg-teal-600 text-white hover:bg-teal-500 rounded-full px-8">
               Subscribe
             </Button>
+
           </div>
         </motion.div>
+
       </div>
     </div>
   );
 }
+
