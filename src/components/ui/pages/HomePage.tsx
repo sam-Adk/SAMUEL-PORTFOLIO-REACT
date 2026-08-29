@@ -1,4 +1,4 @@
-import profileImage from '../../../assets/images/TWONIGGAS.jpeg';
+
 import { motion } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../../ui/button';
@@ -129,7 +129,7 @@ export function HomePage() {
 
                 <div className="relative overflow-hidden rounded-2xl bg-slate-100">
                 <ImageWithFallback
-  src={profileImage}
+  src="/src/assets/images/TWONIGGAS.jpeg"
   alt="Samuel Adikah"
   className="w-full h-[480px] object-cover"
 />
