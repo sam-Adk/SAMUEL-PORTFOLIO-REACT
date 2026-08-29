@@ -68,7 +68,7 @@ export function ContactPage() {
       icon: Mail,
       label: 'Email',
       url: 'mailto:samueladikah66@gmail.com',
-      color: 'hover:bg-red-500 hover:text-white',
+      color: 'hover:bg-teal-600 hover:text-white',
     },
   ];
 
@@ -117,8 +117,9 @@ export function ContactPage() {
   ];
 
   return (
-    <div className="py-16">
+    <div className="py-16 bg-slate-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -126,7 +127,11 @@ export function ContactPage() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h1 className="mb-4 text-4xl md:text-5xl font-bold">
+          <p className="text-sm font-semibold uppercase tracking-widest text-teal-700 mb-3">
+            Get In Touch
+          </p>
+
+          <h1 className="mb-4 text-4xl md:text-5xl font-bold text-slate-900">
             Contact Me
           </h1>
 
@@ -138,6 +143,7 @@ export function ContactPage() {
 
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -145,11 +151,13 @@ export function ContactPage() {
             transition={{ delay: 0.2 }}
           >
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
-              <h2 className="mb-6 text-2xl font-bold">
+
+              <h2 className="mb-6 text-2xl font-bold text-slate-900">
                 Send a Message
               </h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
+
                 {/* Name */}
                 <div>
                   <Label htmlFor="name">Your Name</Label>
@@ -162,7 +170,7 @@ export function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="mt-2 rounded-lg border-slate-300 focus:border-indigo-500 focus:ring-indigo-500"
+                    className="mt-2 rounded-lg border-slate-300 focus:border-teal-500 focus:ring-teal-500"
                   />
                 </div>
 
@@ -178,7 +186,7 @@ export function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="mt-2 rounded-lg border-slate-300 focus:border-indigo-500 focus:ring-indigo-500"
+                    className="mt-2 rounded-lg border-slate-300 focus:border-teal-500 focus:ring-teal-500"
                   />
                 </div>
 
@@ -194,18 +202,19 @@ export function ContactPage() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="mt-2 rounded-lg border-slate-300 focus:border-indigo-500 focus:ring-indigo-500 resize-none"
+                    className="mt-2 rounded-lg border-slate-300 focus:border-teal-500 focus:ring-teal-500 resize-none"
                   />
                 </div>
 
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full"
+                  className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-lg"
                 >
                   <Send size={18} className="mr-2" />
                   Send Message
                 </Button>
+
               </form>
             </div>
           </motion.div>
@@ -217,9 +226,11 @@ export function ContactPage() {
             transition={{ delay: 0.3 }}
             className="space-y-8"
           >
+
             {/* Contact Information */}
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-3xl p-8 border border-indigo-100">
-              <h2 className="mb-6 text-2xl font-bold">
+            <div className="bg-gradient-to-br from-teal-50 to-emerald-50 rounded-3xl p-8 border border-teal-100">
+
+              <h2 className="mb-6 text-2xl font-bold text-slate-900">
                 Get in Touch
               </h2>
 
@@ -229,7 +240,8 @@ export function ContactPage() {
 
                   const content = (
                     <div className="flex items-start gap-4 p-4 bg-white rounded-xl hover:shadow-md transition-shadow">
-                      <div className="p-3 bg-indigo-100 rounded-lg text-indigo-600">
+
+                      <div className="p-3 bg-teal-100 rounded-lg text-teal-700">
                         <Icon size={20} />
                       </div>
 
@@ -242,6 +254,7 @@ export function ContactPage() {
                           {info.value}
                         </p>
                       </div>
+
                     </div>
                   );
 
@@ -268,7 +281,8 @@ export function ContactPage() {
 
             {/* Social Media */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg">
-              <h3 className="mb-6 text-xl font-bold">
+
+              <h3 className="mb-6 text-xl font-bold text-slate-900">
                 Connect on Social Media
               </h3>
 
@@ -301,19 +315,24 @@ export function ContactPage() {
               }}
               className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 border border-green-200"
             >
+
               <div className="flex items-center gap-3 mb-3">
+
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
 
                 <h3 className="text-green-900 text-xl font-bold">
                   Available for Opportunities
                 </h3>
+
               </div>
 
               <p className="text-green-800">
                 I'm currently open to freelance projects and full-time
                 opportunities. Let's discuss how we can work together!
               </p>
+
             </motion.div>
+
           </motion.div>
         </div>
 
@@ -325,11 +344,13 @@ export function ContactPage() {
           transition={{ duration: 0.5 }}
           className="mt-20"
         >
-          <h2 className="mb-8 text-center text-3xl font-bold">
+
+          <h2 className="mb-8 text-center text-3xl font-bold text-slate-900">
             Frequently Asked Questions
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -339,17 +360,21 @@ export function ContactPage() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
               >
-                <h3 className="mb-3 text-lg font-semibold">
+
+                <h3 className="mb-3 text-lg font-semibold text-slate-900">
                   {faq.question}
                 </h3>
 
                 <p className="text-slate-600 leading-relaxed">
                   {faq.answer}
                 </p>
+
               </motion.div>
             ))}
+
           </div>
         </motion.div>
+
       </div>
     </div>
   );
