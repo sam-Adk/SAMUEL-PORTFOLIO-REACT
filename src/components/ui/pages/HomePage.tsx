@@ -129,7 +129,7 @@ export function HomePage() {
 
                 <div className="relative overflow-hidden rounded-2xl bg-slate-100">
                   <ImageWithFallback
-                    src="TWO%20NIGGAS.jpeg"
+                    src="/TWO%20NIGGAS.jpeg"
                     alt="Samuel Adikah"
                     className="w-full h-[480px] object-cover"
                   />
