@@ -128,12 +128,11 @@ export function HomePage() {
                 <div className="absolute -inset-3 rounded-2xl border border-teal-100" />
 
                 <div className="relative overflow-hidden rounded-2xl bg-slate-100">
-                <ImageWithFallback
-  src="/src/assets/images/TWONIGGAS.jpeg"
-  alt="Samuel Adikah"
-  className="w-full h-[480px] object-cover"
-/>
-                </div>
+                  <ImageWithFallback
+                 src="/TWONIGGAS.jpeg"
+                 alt="Samuel Adikah"
+                 className="w-full h-[480px] object-cover"
+                 />
 
                 <div className="absolute bottom-5 left-5 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-xl px-4 py-3 shadow-lg">
                   <div className="flex items-center gap-3">
