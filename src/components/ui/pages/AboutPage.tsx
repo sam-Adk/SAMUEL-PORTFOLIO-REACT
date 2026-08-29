@@ -74,11 +74,11 @@ export function AboutPage() {
             <div className="absolute -inset-3 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-3xl blur-xl opacity-20" />
 
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-              <ImageWithFallback
-                src="/profile3.jpeg"
-                alt="Samuel Adikah"
-                className="w-full h-[550px] object-cover"
-              />
+            <ImageWithFallback
+  src="/TWONIGGAS.jpeg"
+  alt="Samuel Adikah"
+  className="w-full h-[480px] object-cover"
+/>
             </div>
           </motion.div>
 
