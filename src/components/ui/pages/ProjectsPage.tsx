@@ -28,7 +28,8 @@ interface Project {
 }
 
 export function ProjectsPage() {
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedProject, setSelectedProject] =
+    useState<Project | null>(null);
 
   const projects: Project[] = [
     {
@@ -127,8 +128,9 @@ export function ProjectsPage() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-sm font-medium">
-            <span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse" />
+
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-5 rounded-full bg-teal-50 border border-teal-100 text-teal-700 text-sm font-medium">
+            <span className="w-2 h-2 rounded-full bg-teal-600 animate-pulse" />
             My Work
           </div>
 
@@ -141,10 +143,12 @@ export function ProjectsPage() {
             development, UI design, APIs, e-commerce, and creative digital
             products.
           </p>
+
         </motion.div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
           {projects.map((project, index) => (
             <motion.article
               key={project.id}
@@ -157,11 +161,13 @@ export function ProjectsPage() {
               whileHover={{ y: -8 }}
               className="group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-300"
             >
+
               {/* Image */}
               <div
                 className="relative h-56 overflow-hidden cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
+
                 <ImageWithFallback
                   src={project.image}
                   alt={project.title}
@@ -188,39 +194,46 @@ export function ProjectsPage() {
                     {project.title}
                   </h2>
                 </div>
+
               </div>
 
               {/* Content */}
               <div className="p-6">
+
                 <p className="text-slate-600 leading-relaxed mb-5 line-clamp-3">
                   {project.description}
                 </p>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
+
                   {project.tags.slice(0, 4).map((tag) => (
                     <Badge
                       key={tag}
                       variant="secondary"
-                      className="bg-indigo-50 text-indigo-700 border border-indigo-100"
+                      className="bg-teal-50 text-teal-700 border border-teal-100"
                     >
                       {tag}
                     </Badge>
                   ))}
+
                 </div>
 
                 {/* Button */}
                 <Button
                   variant="outline"
-                  className="w-full rounded-xl border-slate-200 hover:border-indigo-500 hover:bg-indigo-50 hover:text-indigo-700 transition-all"
+                  className="w-full rounded-xl border-slate-200 hover:border-teal-500 hover:bg-teal-50 hover:text-teal-700 transition-all"
                   onClick={() => setSelectedProject(project)}
                 >
                   View Project
                   <ArrowUpRight size={17} className="ml-2" />
                 </Button>
+
               </div>
+
             </motion.article>
           ))}
+
         </div>
 
         {/* Bottom CTA */}
@@ -229,13 +242,18 @@ export function ProjectsPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-20 rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 p-8 md:p-12 text-center text-white shadow-xl"
+          className="mt-20 rounded-3xl bg-slate-900 p-8 md:p-12 text-center text-white shadow-xl"
         >
+
+          <p className="text-sm font-semibold uppercase tracking-widest text-teal-400 mb-4">
+            Let's work together
+          </p>
+
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Have a project in mind?
           </h2>
 
-          <p className="max-w-2xl mx-auto text-indigo-100 mb-8">
+          <p className="max-w-2xl mx-auto text-slate-300 mb-8">
             I'm always interested in building useful, creative, and
             meaningful digital products.
           </p>
@@ -243,17 +261,20 @@ export function ProjectsPage() {
           <a href="#/contact">
             <Button
               size="lg"
-              className="bg-white text-indigo-700 hover:bg-slate-100 rounded-full px-8 shadow-lg"
+              className="bg-teal-600 text-white hover:bg-teal-500 rounded-lg px-8 shadow-lg"
             >
               Let's Work Together
               <ArrowUpRight size={18} className="ml-2" />
             </Button>
           </a>
+
         </motion.div>
+
       </div>
 
       {/* Project Modal */}
       <AnimatePresence>
+
         {selectedProject && (
           <Dialog
             open={!!selectedProject}
@@ -261,10 +282,12 @@ export function ProjectsPage() {
               if (!open) setSelectedProject(null);
             }}
           >
+
             <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto p-0 rounded-3xl overflow-hidden">
-              
+
               {/* Modal Image */}
               <div className="relative h-64 md:h-80">
+
                 <ImageWithFallback
                   src={selectedProject.image}
                   alt={selectedProject.title}
@@ -278,11 +301,14 @@ export function ProjectsPage() {
                     {selectedProject.title}
                   </h2>
                 </div>
+
               </div>
 
               {/* Modal Content */}
               <div className="p-6 md:p-8">
+
                 <DialogHeader className="mb-6">
+
                   <DialogTitle className="text-2xl font-bold text-slate-900">
                     {selectedProject.title}
                   </DialogTitle>
@@ -290,11 +316,14 @@ export function ProjectsPage() {
                   <DialogDescription className="text-slate-500">
                     Project details and technologies
                   </DialogDescription>
+
                 </DialogHeader>
 
                 <div className="space-y-7">
+
                   {/* Description */}
                   <div>
+
                     <h3 className="text-lg font-semibold text-slate-900 mb-3">
                       About the Project
                     </h3>
@@ -302,30 +331,36 @@ export function ProjectsPage() {
                     <p className="text-slate-600 leading-relaxed">
                       {selectedProject.longDescription}
                     </p>
+
                   </div>
 
                   {/* Technologies */}
                   <div>
+
                     <h3 className="text-lg font-semibold text-slate-900 mb-3">
                       Technologies
                     </h3>
 
                     <div className="flex flex-wrap gap-2">
+
                       {selectedProject.tags.map((tag) => (
                         <Badge
                           key={tag}
-                          className="bg-indigo-50 text-indigo-700 border border-indigo-100 px-3 py-1"
+                          className="bg-teal-50 text-teal-700 border border-teal-100 px-3 py-1"
                         >
                           {tag}
                         </Badge>
                       ))}
+
                     </div>
+
                   </div>
 
                   {/* Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3 pt-2">
+
                     <Button
-                      className="flex-1 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700"
+                      className="flex-1 rounded-xl bg-teal-600 hover:bg-teal-700 text-white"
                       onClick={() =>
                         window.open(
                           selectedProject.link,
@@ -340,7 +375,7 @@ export function ProjectsPage() {
 
                     <Button
                       variant="outline"
-                      className="flex-1 rounded-xl"
+                      className="flex-1 rounded-xl border-slate-300 hover:border-teal-500 hover:text-teal-700"
                       onClick={() =>
                         window.open(
                           selectedProject.github,
@@ -352,13 +387,19 @@ export function ProjectsPage() {
                       <Github size={18} className="mr-2" />
                       View Source Code
                     </Button>
+
                   </div>
+
                 </div>
               </div>
+
             </DialogContent>
+
           </Dialog>
         )}
+
       </AnimatePresence>
+
     </div>
   );
 }
