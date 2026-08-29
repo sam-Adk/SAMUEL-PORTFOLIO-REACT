@@ -9,7 +9,11 @@ import {
   DialogHeader,
   DialogTitle,
 } from '../../ui/dialog';
-import { ExternalLink, Github } from 'lucide-react';
+import {
+  ExternalLink,
+  Github,
+  ArrowUpRight,
+} from 'lucide-react';
 import { ImageWithFallback } from '../../figma/ImageWithFallback';
 
 interface Project {
