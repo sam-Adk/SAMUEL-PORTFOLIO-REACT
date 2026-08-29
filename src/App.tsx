@@ -11,8 +11,10 @@ import { Toaster } from './components/ui/sonner';
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 to-slate-100">
+      <div className="min-h-screen flex flex-col bg-background text-foreground">
+        
         <Navigation />
+
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -22,7 +24,9 @@ export default function App() {
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
+
         <Footer />
+
         <Toaster position="top-right" />
       </div>
     </Router>
