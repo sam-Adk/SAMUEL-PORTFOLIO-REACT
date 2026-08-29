@@ -125,28 +125,36 @@ export function HomePage() {
               className="relative"
             >
               <div className="relative max-w-md mx-auto lg:ml-auto">
+
+                {/* Decorative Border */}
                 <div className="absolute -inset-3 rounded-2xl border border-teal-100" />
 
+                {/* Image */}
                 <div className="relative overflow-hidden rounded-2xl bg-slate-100">
                   <ImageWithFallback
-                 src="/TWONIGGAS.jpeg"
-                 alt="Samuel Adikah"
-                 className="w-full h-[480px] object-cover"
-                 />
+                    src="/TWONIGGAS.jpeg"
+                    alt="Samuel Adikah"
+                    className="w-full h-[480px] object-cover"
+                  />
+                </div>
 
+                {/* Open To Work Badge */}
                 <div className="absolute bottom-5 left-5 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-xl px-4 py-3 shadow-lg">
                   <div className="flex items-center gap-3">
                     <div className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
+
                     <div>
                       <p className="text-sm font-medium text-slate-900">
                         Open to work
                       </p>
+
                       <p className="text-xs text-slate-500">
                         Full-time & freelance
                       </p>
                     </div>
                   </div>
                 </div>
+
               </div>
             </motion.div>
 
@@ -252,4 +260,5 @@ export function HomePage() {
     </div>
   );
 }
+
 
