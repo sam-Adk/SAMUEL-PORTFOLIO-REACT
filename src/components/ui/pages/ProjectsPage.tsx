@@ -1,15 +1,8 @@
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { Button } from '../../ui/button';
 import { Badge } from '../../ui/badge';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from '../../ui/dialog';
 import {
   ExternalLink,
   Github,
@@ -37,12 +30,17 @@ export function ProjectsPage() {
       id: 1,
       title: 'E-Commerce Product Catalog',
       description:
-        'A responsive e-commerce application for browsing products, filtering listings, viewing product details, and exploring a modern online shopping experience.',
+        'A responsive e-commerce platform for browsing products, filtering listings, viewing product details, and exploring a modern online shopping experience.',
       longDescription:
-        'This e-commerce platform was built to demonstrate the development of a modern online shopping experience. Users can browse products, explore product information, filter available items, and navigate through a responsive interface designed for both desktop and mobile devices. The project focuses on reusable React components, API integration, responsive layouts, and a clean user experience.',
+        'This e-commerce platform was built to demonstrate a modern online shopping experience using React. Users can browse products, explore product information, filter available items, and navigate through a responsive interface designed for desktop and mobile devices. The project focuses on reusable components, API integration, responsive layouts, and an intuitive shopping experience.',
       image:
         'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80',
-      tags: ['React', 'Tailwind CSS', 'JavaScript', 'REST API'],
+      tags: [
+        'React',
+        'Tailwind CSS',
+        'JavaScript',
+        'REST API',
+      ],
       link:
         'https://e-commerce-product-catalog-2xk2.onrender.com/',
       github:
@@ -53,12 +51,17 @@ export function ProjectsPage() {
       id: 2,
       title: 'Netflix-Style Portfolio',
       description:
-        'A cinematic portfolio website inspired by streaming platforms, designed to present projects and personal work through an engaging, interactive interface.',
+        'A cinematic portfolio website inspired by streaming platforms, designed to showcase projects through an engaging and interactive interface.',
       longDescription:
-        'This project explores how a familiar streaming-platform interface can be adapted into a developer portfolio. It uses a cinematic layout, responsive project sections, interactive navigation, reusable components, and dynamic content presentation to create a more engaging way of showcasing technical work. The project demonstrates frontend architecture, responsive design, animations, and API-driven content.',
+        'This project explores how a familiar streaming-platform interface can be adapted into a developer portfolio. It features a cinematic layout, responsive project sections, interactive navigation, reusable components, and dynamic content presentation. The project demonstrates frontend architecture, responsive design, animations, and API-driven content.',
       image:
         'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?auto=format&fit=crop&w=1200&q=80',
-      tags: ['React', 'JavaScript', 'CSS', 'API Integration'],
+      tags: [
+        'React',
+        'JavaScript',
+        'CSS',
+        'API Integration',
+      ],
       link:
         'https://my-portfolio-8f1u.onrender.com/',
       github:
@@ -71,10 +74,15 @@ export function ProjectsPage() {
       description:
         'A movie discovery application that helps users discover films based on their mood, genres, interests, and current movie trends.',
       longDescription:
-        'The Mood Movie Recommender combines movie discovery with personalized recommendations. Users can explore films by mood and genre while discovering popular and relevant titles through an interactive interface. The project demonstrates API integration, dynamic data rendering, responsive UI development, and the implementation of a recommendation-focused user experience.',
+        'The Mood Movie Recommender combines movie discovery with personalized recommendations. Users can explore films based on different moods and genres while discovering popular and relevant titles through an interactive interface. The project demonstrates API integration, dynamic data rendering, responsive UI development, and a recommendation-focused user experience.',
       image:
         'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=80',
-      tags: ['React', 'JavaScript', 'API', 'Recommendation System'],
+      tags: [
+        'React',
+        'JavaScript',
+        'API',
+        'Recommendation System',
+      ],
       link:
         'https://mood-movie-recommendor.onrender.com/',
       github:
@@ -87,10 +95,15 @@ export function ProjectsPage() {
       description:
         'A portfolio-building concept designed to help developers and creatives create professional personal websites without starting from scratch.',
       longDescription:
-        'Portfolio Builder is a web application concept focused on simplifying the process of creating a professional online portfolio. The project explores reusable portfolio layouts, customizable sections, responsive design, and a user-friendly interface that can help developers, designers, and other professionals present their work online.',
+        'Portfolio Builder is a web application concept focused on simplifying the process of creating a professional online portfolio. The project explores reusable layouts, customizable sections, responsive design, and a user-friendly interface that can help developers, designers, and other professionals present their work online.',
       image:
         'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=80',
-      tags: ['React', 'Tailwind CSS', 'UI Design', 'Responsive Design'],
+      tags: [
+        'React',
+        'Tailwind CSS',
+        'UI Design',
+        'Responsive Design',
+      ],
       link:
         'https://example.com',
       github:
@@ -103,10 +116,15 @@ export function ProjectsPage() {
       description:
         'A visually distinctive online art shop featuring product browsing, shopping interactions, and an atmospheric dark-themed design.',
       longDescription:
-        'Late Night Epiphanies is an e-commerce concept created around a distinctive artistic identity. The application demonstrates how visual storytelling and product presentation can be combined with e-commerce functionality. It includes product cards, shopping interactions, notifications, responsive layouts, and a dark visual experience designed to make the storefront feel immersive.',
+        'Late Night Epiphanies is an e-commerce concept created around a distinctive artistic identity. The application demonstrates how visual storytelling and product presentation can be combined with e-commerce functionality. It includes product cards, shopping interactions, notifications, responsive layouts, and a dark visual experience designed to make the storefront immersive.',
       image:
         'https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1200&q=80',
-      tags: ['HTML', 'CSS', 'JavaScript', 'E-Commerce'],
+      tags: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'E-Commerce',
+      ],
       link:
         'https://late-night-epiphanies-shop.onrender.com/',
       github:
@@ -122,7 +140,12 @@ export function ProjectsPage() {
         'CyberWatch Kenya is a cybersecurity information platform created to make security-related information easier to discover and understand. The project focuses on presenting cybersecurity news, threat awareness, educational material, and technology updates through a clean web interface. It also explores content organization and audience-focused digital publishing.',
       image:
         'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=80',
-      tags: ['Cybersecurity', 'Web Development', 'Content', 'Newsletter'],
+      tags: [
+        'Cybersecurity',
+        'Web Development',
+        'Content',
+        'Newsletter',
+      ],
       link:
         'https://cyberwatch-kenya.onrender.com/',
       github:
@@ -135,10 +158,16 @@ export function ProjectsPage() {
       description:
         'An AI-powered weather dashboard that combines real-time weather data with location search, forecasts, and intelligent weather insights.',
       longDescription:
-        'Weather AI Dashboard is a full-stack weather application that integrates a weather API with a React frontend and Node.js backend. Users can search for locations, view current weather conditions and forecasts, and receive weather information through an intuitive dashboard. The project demonstrates API integration, backend proxying, location services, caching, responsive UI development, and AI-assisted weather insights.',
+        'Weather AI Dashboard is a full-stack weather application built with a React frontend and Node.js backend. Users can search for locations, view current weather conditions and forecasts, and access weather information through an intuitive dashboard. The application demonstrates API integration, backend services, location search, caching, responsive UI development, and AI-assisted weather insights.',
       image:
         'https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=1200&q=80',
-      tags: ['React', 'Node.js', 'Express', 'Weather API', 'AI'],
+      tags: [
+        'React',
+        'Node.js',
+        'Express',
+        'Weather API',
+        'AI',
+      ],
       link:
         'https://weather-ai-dashboard-1.onrender.com/',
       github:
@@ -151,10 +180,15 @@ export function ProjectsPage() {
       description:
         'A cryptocurrency dashboard that allows users to monitor crypto prices, market trends, and digital asset information in one interface.',
       longDescription:
-        'Crypto Tracker is a cryptocurrency market dashboard designed to make digital asset information easier to monitor. Users can explore cryptocurrency prices, market data, trends, and other relevant information through a responsive interface. The project demonstrates API integration, dynamic data rendering, reusable React components, responsive dashboard design, and the handling of frequently changing financial data.',
+        'Crypto Tracker is a cryptocurrency market dashboard designed to make digital asset information easier to monitor. Users can explore cryptocurrency prices, market data, market trends, and other relevant information through a responsive interface. The project demonstrates API integration, dynamic data rendering, reusable React components, responsive dashboard design, and the handling of frequently changing market data.',
       image:
         'https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&w=1200&q=80',
-      tags: ['React', 'JavaScript', 'Crypto API', 'Dashboard'],
+      tags: [
+        'React',
+        'JavaScript',
+        'Crypto API',
+        'Dashboard',
+      ],
       link:
         'https://crypto-tracker-0hdb.onrender.com/',
       github:
@@ -165,12 +199,17 @@ export function ProjectsPage() {
       id: 9,
       title: 'Movie-Flix',
       description:
-        'A movie streaming-style discovery application where users can browse movies, explore trending titles, and discover films through a modern interface.',
+        'A movie discovery application where users can browse movies, explore trending titles, and discover films through a modern streaming-style interface.',
       longDescription:
-        'Movie-Flix is a movie discovery application inspired by modern streaming platforms. It allows users to browse movie content, explore popular and trending titles, and discover films through an interactive interface. The project demonstrates external API integration, dynamic content rendering, responsive layouts, reusable components, and modern frontend development techniques.',
+        'Movie-Flix is a movie discovery application inspired by modern streaming platforms. Users can browse movie content, explore popular and trending titles, and discover films through an interactive interface. The project demonstrates external API integration, dynamic content rendering, responsive layouts, reusable components, and modern frontend development techniques.',
       image:
         'https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=1200&q=80',
-      tags: ['React', 'JavaScript', 'Movie API', 'Responsive UI'],
+      tags: [
+        'React',
+        'JavaScript',
+        'Movie API',
+        'Responsive UI',
+      ],
       link:
         'https://movie-flix-2ixm.onrender.com/',
       github:
@@ -183,10 +222,15 @@ export function ProjectsPage() {
       description:
         'A GitHub profile search application that allows users to find developers and explore their repositories, profiles, and public GitHub activity.',
       longDescription:
-        'GitHub Profile Finder connects to the GitHub API to make developer profile discovery simple. Users can search for a GitHub username and view profile information, repositories, project details, and other publicly available information. The project demonstrates API consumption, asynchronous data fetching, dynamic rendering, search functionality, and responsive frontend development.',
+        'GitHub Profile Finder connects to the GitHub API to make developer profile discovery simple. Users can search for a GitHub username and view profile information, repositories, project details, and other publicly available information. The project demonstrates API consumption, asynchronous data fetching, search functionality, dynamic rendering, and responsive frontend development.',
       image:
         'https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&w=1200&q=80',
-      tags: ['React', 'JavaScript', 'GitHub API', 'REST API'],
+      tags: [
+        'React',
+        'JavaScript',
+        'GitHub API',
+        'REST API',
+      ],
       link:
         'https://github-profile-founder.onrender.com/',
       github:
@@ -197,12 +241,17 @@ export function ProjectsPage() {
       id: 11,
       title: 'Split Wise',
       description:
-        'A personal finance dashboard designed to help users organize expenses, monitor spending, and better understand their financial activity.',
+        'A personal finance dashboard designed to help users organize expenses, track spending, and better understand their financial activity.',
       longDescription:
         'Split Wise is a finance management application focused on helping users organize and understand their expenses. The dashboard provides a structured interface for tracking financial activity and presenting important information in an easy-to-understand format. The project demonstrates modern frontend development, responsive dashboard design, reusable components, and the creation of practical financial management tools.',
       image:
         'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80',
-      tags: ['React', 'JavaScript', 'Finance', 'Dashboard'],
+      tags: [
+        'React',
+        'JavaScript',
+        'Finance',
+        'Dashboard',
+      ],
       link:
         'https://split-wise2.onrender.com/',
       github:
@@ -253,7 +302,7 @@ export function ProjectsPage() {
               className="group bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-2xl transition-all duration-300"
             >
 
-              {/* Image */}
+              {/* Project Image */}
               <div
                 className="relative h-56 overflow-hidden cursor-pointer"
                 onClick={() => setSelectedProject(project)}
@@ -278,7 +327,7 @@ export function ProjectsPage() {
                   <ArrowUpRight size={20} />
                 </div>
 
-                {/* Bottom title */}
+                {/* Project Title */}
                 <div className="absolute bottom-5 left-5 right-5">
                   <h2 className="text-xl font-bold text-white">
                     {project.title}
@@ -286,7 +335,7 @@ export function ProjectsPage() {
                 </div>
               </div>
 
-              {/* Content */}
+              {/* Project Content */}
               <div className="p-6">
 
                 <p className="text-slate-600 leading-relaxed mb-5 line-clamp-3">
@@ -306,8 +355,9 @@ export function ProjectsPage() {
                   ))}
                 </div>
 
-                {/* Button */}
+                {/* View Project */}
                 <Button
+                  type="button"
                   variant="outline"
                   className="w-full rounded-xl border-slate-200 hover:border-teal-500 hover:bg-teal-50 hover:text-teal-700 transition-all"
                   onClick={() => setSelectedProject(project)}
@@ -356,123 +406,183 @@ export function ProjectsPage() {
 
       </div>
 
-      {/* Project Modal */}
-      <AnimatePresence>
-        {selectedProject && (
-          <Dialog
-            open={!!selectedProject}
-            onOpenChange={(open) => {
-              if (!open) setSelectedProject(null);
+      {/* =====================================================
+          PROJECT DETAILS MODAL
+          ===================================================== */}
+
+      {selectedProject && (
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm"
+          onClick={() => setSelectedProject(null)}
+        >
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              scale: 0.95,
+              y: 20,
             }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.2,
+            }}
+            onClick={(event) => event.stopPropagation()}
+            className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl bg-white shadow-2xl"
           >
-            <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto p-0 rounded-3xl overflow-hidden">
 
-              {/* Modal Image */}
-              <div className="relative h-64 md:h-80">
-                <ImageWithFallback
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="w-full h-full object-cover"
-                />
+            {/* Close Button */}
+            <button
+              type="button"
+              onClick={() => setSelectedProject(null)}
+              className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-2xl leading-none text-white transition hover:bg-black/80"
+              aria-label="Close project details"
+            >
+              ×
+            </button>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+            {/* Modal Image */}
+            <div className="relative h-56 md:h-72">
 
-                <div className="absolute bottom-6 left-6 right-6">
-                  <h2 className="text-3xl font-bold text-white">
-                    {selectedProject.title}
-                  </h2>
-                </div>
+              <ImageWithFallback
+                src={selectedProject.image}
+                alt={selectedProject.title}
+                className="h-full w-full object-cover"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+              <div className="absolute bottom-6 left-6 right-6">
+
+                <p className="mb-2 text-sm font-medium uppercase tracking-wider text-teal-300">
+                  Project {String(selectedProject.id).padStart(2, '0')}
+                </p>
+
+                <h2 className="text-3xl font-bold text-white md:text-4xl">
+                  {selectedProject.title}
+                </h2>
+
+              </div>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 md:p-8">
+
+              {/* Description */}
+              <div className="mb-8">
+
+                <h3 className="mb-3 text-xl font-bold text-slate-900">
+                  About This Project
+                </h3>
+
+                <p className="text-base leading-7 text-slate-600">
+                  {selectedProject.longDescription}
+                </p>
+
               </div>
 
-              {/* Modal Content */}
-              <div className="p-6 md:p-8">
+              {/* Technologies */}
+              <div className="mb-8">
 
-                <DialogHeader className="mb-6">
-                  <DialogTitle className="text-2xl font-bold text-slate-900">
-                    {selectedProject.title}
-                  </DialogTitle>
+                <h3 className="mb-3 text-xl font-bold text-slate-900">
+                  Technologies Used
+                </h3>
 
-                  <DialogDescription className="text-slate-500">
-                    Project details and technologies
-                  </DialogDescription>
-                </DialogHeader>
+                <div className="flex flex-wrap gap-2">
 
-                <div className="space-y-7">
-
-                  {/* Description */}
-                  <div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-3">
-                      About the Project
-                    </h3>
-
-                    <p className="text-slate-600 leading-relaxed">
-                      {selectedProject.longDescription}
-                    </p>
-                  </div>
-
-                  {/* Technologies */}
-                  <div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-3">
-                      Technologies
-                    </h3>
-
-                    <div className="flex flex-wrap gap-2">
-                      {selectedProject.tags.map((tag) => (
-                        <Badge
-                          key={tag}
-                          className="bg-teal-50 text-teal-700 border border-teal-100 px-3 py-1"
-                        >
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
-
-                    <a
-                      href={selectedProject.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1"
+                  {selectedProject.tags.map((tag) => (
+                    <Badge
+                      key={tag}
+                      className="border border-teal-100 bg-teal-50 px-3 py-1.5 text-teal-700"
                     >
-                      <Button
-                        className="w-full rounded-xl bg-teal-600 hover:bg-teal-700 text-white"
-                      >
-                        <ExternalLink size={18} className="mr-2" />
-                        Visit Live Project
-                      </Button>
-                    </a>
-
-                    <a
-                      href={selectedProject.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1"
-                    >
-                      <Button
-                        variant="outline"
-                        className="w-full rounded-xl border-slate-300 hover:border-teal-500 hover:text-teal-700"
-                      >
-                        <Github size={18} className="mr-2" />
-                        View Source Code
-                      </Button>
-                    </a>
-
-                  </div>
+                      {tag}
+                    </Badge>
+                  ))}
 
                 </div>
+
               </div>
 
-            </DialogContent>
-          </Dialog>
-        )}
-      </AnimatePresence>
+              {/* Project Links */}
+              <div>
+
+                <h3 className="mb-4 text-xl font-bold text-slate-900">
+                  Project Links
+                </h3>
+
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+
+                  {/* Live Website */}
+                  <a
+                    href={selectedProject.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Button
+                      type="button"
+                      className="h-12 w-full rounded-xl bg-teal-600 text-white hover:bg-teal-700"
+                    >
+                      <ExternalLink
+                        size={18}
+                        className="mr-2"
+                      />
+                      Visit Live Project
+                    </Button>
+                  </a>
+
+                  {/* GitHub */}
+                  <a
+                    href={selectedProject.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <Button
+                      type="button"
+                      variant="outline"
+                      className="h-12 w-full rounded-xl border-slate-300 text-slate-700 hover:border-teal-500 hover:bg-teal-50 hover:text-teal-700"
+                    >
+                      <Github
+                        size={18}
+                        className="mr-2"
+                      />
+                      View Source Code
+                    </Button>
+                  </a>
+
+                </div>
+
+              </div>
+
+              {/* Close */}
+              <div className="mt-6 border-t border-slate-200 pt-6">
+
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={() => setSelectedProject(null)}
+                  className="w-full rounded-xl"
+                >
+                  Close Project
+                </Button>
+
+              </div>
+
+            </div>
+
+          </motion.div>
+
+        </div>
+      )}
 
     </div>
   );
 }
+
 
 
 
