@@ -263,11 +263,11 @@ export function ProjectsPage() {
   id: 12,
   title: 'Flash Master',
   description:
-    'A modern e-commerce platform for discovering products, browsing categories, and interacting with an online shopping experience.',
+    'An interactive online learning platform that helps users study and retain information through digital flashcards and structured learning sessions.',
   longDescription:
-    'Flash Master is a full-stack e-commerce application designed to provide users with a modern and responsive online shopping experience. The platform focuses on product discovery, organized product presentation, responsive layouts, and intuitive navigation. The project demonstrates practical web application development, reusable components, e-commerce interface design, and the integration of frontend functionality into a deployed production application.',
+    'Flash Master is an interactive web-based learning application built around the concept of digital flashcards. It provides users with a simple and engaging way to study, review, and reinforce knowledge through online learning sessions. The project focuses on creating an accessible study experience with organized learning content, interactive flashcards, and a responsive interface that works across different devices. It demonstrates practical frontend development, interactive UI design, state management, and the development of a real-world educational application.',
   image:
-    'https://images.unsplash.com/photo-1607083206968-13611e3d76db?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80',
   tags: [
     'React',
     'JavaScript',
