@@ -301,6 +301,74 @@ export function ProjectsPage() {
     'https://github.com/sam-Adk',
 },
 
+  
+{
+  id: 14,
+  title: 'Word Wise',
+  description:
+    'A digital dictionary application that helps users quickly discover word meanings, definitions, pronunciations, and related vocabulary.',
+  longDescription:
+    'Word Wise is a web-based dictionary application designed to make exploring and understanding words simple and accessible. Users can search for words and view useful information such as definitions, meanings, pronunciations, and related vocabulary. The project demonstrates API integration, asynchronous data fetching, dynamic content rendering, search functionality, and responsive interface design.',
+  image:
+    'https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=1200&q=80',
+  tags: [
+    'React',
+    'JavaScript',
+    'Dictionary API',
+    'REST API',
+    'Responsive Design',
+  ],
+  link:
+    'https://word-wise1.onrender.com/',
+  github:
+    'https://github.com/sam-Adk',
+},
+
+{
+  id: 15,
+  title: 'Recipe Founder',
+  description:
+    'A recipe discovery application that helps users find food recipes, explore ingredients, and discover ideas for their next meal.',
+  longDescription:
+    'Recipe Founder is a food discovery web application designed to make finding recipes easier and more enjoyable. Users can explore different meals and discover recipes based on the food they are interested in preparing. The project demonstrates API integration, dynamic recipe data, search and discovery functionality, responsive layouts, and the development of an engaging food-focused user experience.',
+  image:
+    'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80',
+  tags: [
+    'React',
+    'JavaScript',
+    'Recipe API',
+    'API Integration',
+    'Responsive Design',
+  ],
+  link:
+    'https://recipe-founder-1k9z.onrender.com/',
+  github:
+    'https://github.com/sam-Adk',
+},
+
+{
+  id: 16,
+  title: 'Sound Wave',
+  description:
+    'A modern music discovery and listening interface designed for exploring songs, artists, albums, and music content online.',
+  longDescription:
+    'Sound Wave is a music-focused web application created to provide an engaging way to explore and interact with music online. The platform is designed around music discovery, allowing users to browse songs, artists, albums, and other music content through an intuitive interface. The project demonstrates dynamic content rendering, API integration, responsive UI development, and the creation of an immersive digital music experience.',
+  image:
+    'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80',
+  tags: [
+    'React',
+    'JavaScript',
+    'Music API',
+    'API Integration',
+    'Responsive UI',
+  ],
+  link:
+    'https://sound-wave1.onrender.com/',
+  github:
+    'https://github.com/sam-Adk',
+},
+
+
   ];
 
   return (
