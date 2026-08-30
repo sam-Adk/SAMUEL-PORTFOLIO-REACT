@@ -257,6 +257,50 @@ export function ProjectsPage() {
       github:
         'https://github.com/sam-Adk/Split-Wise2',
     },
+
+  
+{
+  id: 12,
+  title: 'Flash Master',
+  description:
+    'A modern e-commerce platform for discovering products, browsing categories, and interacting with an online shopping experience.',
+  longDescription:
+    'Flash Master is a full-stack e-commerce application designed to provide users with a modern and responsive online shopping experience. The platform focuses on product discovery, organized product presentation, responsive layouts, and intuitive navigation. The project demonstrates practical web application development, reusable components, e-commerce interface design, and the integration of frontend functionality into a deployed production application.',
+  image:
+    'https://images.unsplash.com/photo-1607083206968-13611e3d76db?auto=format&fit=crop&w=1200&q=80',
+  tags: [
+    'React',
+    'JavaScript',
+    'E-Commerce',
+    'Responsive Design',
+  ],
+  link:
+    'https://flash-master1.onrender.com/',
+  github:
+    'https://github.com/sam-Adk/flash-master',
+},
+
+{
+  id: 13,
+  title: 'Shop Hub',
+  description:
+    'A responsive online shopping platform focused on product discovery, browsing, and creating a smooth e-commerce experience.',
+  longDescription:
+    'Shop Hub is a modern e-commerce web application built to demonstrate a practical online shopping experience. Users can browse products through a structured interface and interact with an application designed around product discovery and online retail. The project demonstrates responsive frontend development, reusable UI components, product-focused layouts, and the development and deployment of a complete web application.',
+  image:
+    'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1200&q=80',
+  tags: [
+    'React',
+    'JavaScript',
+    'E-Commerce',
+    'UI Development',
+  ],
+  link:
+    'https://shop-hub-rejg.onrender.com/',
+  github:
+    'https://github.com/sam-Adk',
+},
+
   ];
 
   return (
