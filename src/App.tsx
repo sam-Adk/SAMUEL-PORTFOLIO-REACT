@@ -7,6 +7,8 @@ import { ProjectsPage } from './components/ui/pages/ProjectsPage';
 import { BlogPage } from './components/ui/pages/BlogPage';
 import { ContactPage } from './components/ui/pages/ContactPage';
 import { Toaster } from './components/ui/sonner';
+import WalkthroughsPage from "./pages/WalkthroughsPage";
+import WalkthroughDetailPage from "./pages/WalkthroughDetailPage";
 
 export default function App() {
   return (
