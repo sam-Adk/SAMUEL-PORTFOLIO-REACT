@@ -1,16 +1,18 @@
-import { motion } from "motion/react";
-import { ArrowRight, Clock3, Play } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-import { walkthroughs } from "../data/walkthroughData";
+import { motion } from 'motion/react';
+import { ArrowRight, Clock3, Play } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { walkthroughs } from '../data/walkthroughData';
 
 export default function WalkthroughsPage() {
   const navigate = useNavigate();
 
   return (
     <main className="min-h-screen bg-white text-slate-900">
+
       {/* HERO */}
       <section className="px-6 pt-32 pb-20">
         <div className="mx-auto max-w-6xl">
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -42,28 +44,36 @@ export default function WalkthroughsPage() {
             <span>•</span>
             <span>Built from idea to implementation</span>
           </div>
+
         </div>
       </section>
 
       {/* WALKTHROUGHS */}
       <section className="px-6 pb-32">
         <div className="mx-auto max-w-6xl space-y-16">
+
           {walkthroughs.map((project, index) => (
             <motion.article
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: index * 0.05 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.05,
+              }}
               className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="grid lg:grid-cols-2">
-                {/* VIDEO / THUMBNAIL */}
-                <div
-                  className="relative aspect-video cursor-pointer overflow-hidden bg-slate-100 lg:aspect-auto"
+
+                {/* THUMBNAIL */}
+                <button
+                  type="button"
                   onClick={() =>
                     navigate(`/walkthroughs/${project.id}`)
                   }
+                  className="relative aspect-video cursor-pointer overflow-hidden bg-slate-100 text-left lg:aspect-auto"
+                  aria-label={`Watch ${project.title} walkthrough`}
                 >
                   <img
                     src={project.thumbnail}
@@ -87,10 +97,11 @@ export default function WalkthroughsPage() {
                     <Clock3 size={14} />
                     {project.duration}
                   </div>
-                </div>
+                </button>
 
                 {/* CONTENT */}
                 <div className="flex flex-col justify-center p-8 md:p-10 lg:p-12">
+
                   <div className="mb-5 text-sm font-semibold tracking-widest text-teal-600">
                     {project.number}
                   </div>
@@ -115,27 +126,32 @@ export default function WalkthroughsPage() {
                   </div>
 
                   <button
+                    type="button"
                     onClick={() =>
                       navigate(`/walkthroughs/${project.id}`)
                     }
                     className="mt-8 inline-flex w-fit items-center gap-2 font-semibold text-slate-900 transition-colors hover:text-teal-600"
                   >
                     Watch walkthrough
+
                     <ArrowRight
                       size={18}
                       className="transition-transform group-hover:translate-x-1"
                     />
                   </button>
+
                 </div>
               </div>
             </motion.article>
           ))}
+
         </div>
       </section>
 
       {/* RECRUITER CTA */}
       <section className="border-t border-slate-200 bg-slate-50 px-6 py-24">
         <div className="mx-auto max-w-4xl text-center">
+
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-600">
             Want to know more?
           </p>
@@ -150,13 +166,16 @@ export default function WalkthroughsPage() {
           </p>
 
           <button
-            onClick={() => navigate("/contact")}
+            type="button"
+            onClick={() => navigate('/contact')}
             className="mt-8 rounded-full bg-slate-900 px-7 py-3.5 font-semibold text-white transition hover:bg-slate-700"
           >
             Get in touch
           </button>
+
         </div>
       </section>
+
     </main>
   );
 }
