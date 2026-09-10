@@ -1,14 +1,14 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from 'react-router-dom';
 import {
   ArrowLeft,
   ExternalLink,
   Github,
   Play,
-} from "lucide-react";
-import { walkthroughs } from "../data/walkthroughData";
+} from 'lucide-react';
+import { walkthroughs } from '../data/walkthroughData';
 
 export default function WalkthroughDetailPage() {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
   const project = walkthroughs.find(
@@ -17,18 +17,29 @@ export default function WalkthroughDetailPage() {
 
   if (!project) {
     return (
-      <main className="flex min-h-screen items-center justify-center px-6">
+      <main className="flex min-h-screen items-center justify-center bg-white px-6">
         <div className="text-center">
-          <h1 className="text-4xl font-bold">
+
+          <p className="text-sm font-semibold uppercase tracking-widest text-teal-600">
+            404
+          </p>
+
+          <h1 className="mt-3 text-4xl font-bold text-slate-900">
             Walkthrough not found
           </h1>
 
+          <p className="mt-4 text-slate-600">
+            The project walkthrough you're looking for doesn't exist.
+          </p>
+
           <button
-            onClick={() => navigate("/walkthroughs")}
-            className="mt-6 rounded-full bg-slate-900 px-6 py-3 text-white"
+            type="button"
+            onClick={() => navigate('/walkthroughs')}
+            className="mt-6 rounded-full bg-slate-900 px-6 py-3 font-medium text-white transition hover:bg-slate-700"
           >
             Back to walkthroughs
           </button>
+
         </div>
       </main>
     );
@@ -36,11 +47,14 @@ export default function WalkthroughDetailPage() {
 
   return (
     <main className="min-h-screen bg-white text-slate-900">
+
       {/* HEADER */}
       <section className="px-6 pb-12 pt-28">
         <div className="mx-auto max-w-5xl">
+
           <button
-            onClick={() => navigate("/walkthroughs")}
+            type="button"
+            onClick={() => navigate('/walkthroughs')}
             className="mb-10 inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition hover:text-slate-900"
           >
             <ArrowLeft size={17} />
@@ -58,14 +72,17 @@ export default function WalkthroughDetailPage() {
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">
             {project.description}
           </p>
+
         </div>
       </section>
 
       {/* VIDEO */}
       <section className="px-6">
         <div className="mx-auto max-w-5xl">
+
           <div className="overflow-hidden rounded-3xl bg-black shadow-2xl">
             <div className="aspect-video">
+
               <iframe
                 src={project.videoUrl}
                 title={`${project.title} project walkthrough`}
@@ -73,6 +90,7 @@ export default function WalkthroughDetailPage() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
+
             </div>
           </div>
 
@@ -80,13 +98,17 @@ export default function WalkthroughDetailPage() {
             <Play size={15} />
             {project.duration} project walkthrough
           </div>
+
         </div>
       </section>
 
       {/* PROJECT DETAILS */}
       <section className="px-6 py-20">
         <div className="mx-auto max-w-5xl">
+
           <div className="grid gap-12 md:grid-cols-2">
+
+            {/* PROBLEM */}
             <div>
               <p className="text-sm font-semibold uppercase tracking-widest text-teal-600">
                 The problem
@@ -101,6 +123,7 @@ export default function WalkthroughDetailPage() {
               </p>
             </div>
 
+            {/* CHALLENGE */}
             <div>
               <p className="text-sm font-semibold uppercase tracking-widest text-teal-600">
                 The challenge
@@ -115,6 +138,7 @@ export default function WalkthroughDetailPage() {
               </p>
             </div>
 
+            {/* SOLUTION */}
             <div>
               <p className="text-sm font-semibold uppercase tracking-widest text-teal-600">
                 The solution
@@ -129,6 +153,7 @@ export default function WalkthroughDetailPage() {
               </p>
             </div>
 
+            {/* RESULT */}
             <div>
               <p className="text-sm font-semibold uppercase tracking-widest text-teal-600">
                 The result
@@ -142,13 +167,16 @@ export default function WalkthroughDetailPage() {
                 {project.result}
               </p>
             </div>
+
           </div>
+
         </div>
       </section>
 
       {/* TECHNOLOGIES */}
       <section className="border-y border-slate-200 bg-slate-50 px-6 py-16">
         <div className="mx-auto max-w-5xl">
+
           <p className="text-sm font-semibold uppercase tracking-widest text-teal-600">
             Technology
           </p>
@@ -167,17 +195,20 @@ export default function WalkthroughDetailPage() {
               </span>
             ))}
           </div>
+
         </div>
       </section>
 
-      {/* LINKS */}
+      {/* PROJECT LINKS */}
       <section className="px-6 py-20">
         <div className="mx-auto max-w-5xl">
+
           <h2 className="text-3xl font-bold">
             Explore the project
           </h2>
 
           <div className="mt-7 flex flex-wrap gap-4">
+
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
@@ -201,9 +232,12 @@ export default function WalkthroughDetailPage() {
                 Source Code
               </a>
             )}
+
           </div>
+
         </div>
       </section>
+
     </main>
   );
 }
