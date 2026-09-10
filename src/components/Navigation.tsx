@@ -12,6 +12,7 @@ export function Navigation() {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/projects', label: 'Projects' },
+    { path: '/walkthroughs', label: 'Proof of Work' },
     { path: '/blog', label: 'Blog' },
     { path: '/contact', label: 'Contact' },
   ];
@@ -21,6 +22,7 @@ export function Navigation() {
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/70 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
         <div className="flex justify-between items-center h-20">
 
           {/* =========================================
@@ -76,6 +78,7 @@ export function Navigation() {
                   {item.label}
                 </span>
 
+                {/* Active underline */}
                 {isActive(item.path) && (
                   <motion.div
                     layoutId="activeTab"
@@ -97,7 +100,11 @@ export function Navigation() {
           <button
             type="button"
             onClick={() => setIsOpen(!isOpen)}
-            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-label={
+              isOpen
+                ? 'Close navigation menu'
+                : 'Open navigation menu'
+            }
             aria-expanded={isOpen}
             className="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 hover:text-teal-700 transition-colors"
           >
@@ -118,6 +125,7 @@ export function Navigation() {
               className="md:hidden overflow-hidden border-t border-slate-100"
             >
               <div className="py-4 space-y-2">
+
                 {navItems.map((item) => (
                   <Link
                     key={item.path}
@@ -132,14 +140,17 @@ export function Navigation() {
                     {item.label}
                   </Link>
                 ))}
+
               </div>
             </motion.div>
           )}
         </AnimatePresence>
+
       </div>
     </nav>
   );
 }
+
 
 
 
