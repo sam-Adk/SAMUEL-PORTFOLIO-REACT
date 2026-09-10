@@ -1,3 +1,4 @@
+
 export interface Walkthrough {
   id: string;
   number: string;
@@ -18,117 +19,88 @@ export interface Walkthrough {
 
 export const walkthroughs: Walkthrough[] = [
   {
-    id: 'project-one',
+    id: 'web-scraper',
     number: '01',
-    title: 'Project One',
+    title: 'Web Scraper & Insight Pipeline',
     shortDescription:
-      'A practical web application built to solve a real-world problem.',
+      'A complete web-scraping pipeline that turns live web pages into structured, actionable data.',
     description:
-      'A short walkthrough of the project, including what I built, the problem I wanted to solve, the challenges I faced and the technical decisions behind the implementation.',
-
-    videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
-
-    thumbnail: '/walkthroughs/project-one.jpg',
-
+      'A full-stack data pipeline that starts with a live web page and transforms raw web content into structured data and useful insights. The project combines browser automation, HTML parsing, PostgreSQL and Streamlit into one workflow.',
+    videoUrl: 'https://www.youtube.com/embed/gcWazZ5fiiM',
+    thumbnail: '/walkthroughs/web-scraper.jpg',
     duration: '2:00',
-
     technologies: [
-      'React',
-      'TypeScript',
+      'Playwright',
+      'BeautifulSoup',
+      'Python',
+      'PostgreSQL',
+      'Streamlit',
+    ],
+    problem:
+      'Web data is often trapped inside pages that are difficult to analyze directly. I wanted to build a pipeline that could collect live web content and turn it into structured information that could actually be explored and used.',
+    challenge:
+      'The challenging part was handling the transition from a live web page to reliable structured data while dealing with dynamically rendered content, parsing and database storage.',
+    solution:
+      'I combined Playwright for browser automation, BeautifulSoup for extracting and parsing page content, PostgreSQL for persistent structured storage, and Streamlit for presenting the resulting information through an interactive interface.',
+    result:
+      'The result is an end-to-end workflow that demonstrates how I can move from raw web data to a usable analytical product rather than stopping at the scraping stage.',
+  },
+
+  {
+    id: 'distributed-rate-limiter',
+    number: '02',
+    title: 'Distributed Rate Limiter',
+    shortDescription:
+      'A distributed API rate limiter using Token Bucket and Leaky Bucket algorithms with atomic Redis scripts.',
+    description:
+      'A backend infrastructure project focused on protecting APIs from abuse at scale. The system implements Token Bucket and Leaky Bucket rate-limiting algorithms and uses Redis atomic scripts to keep request handling consistent across distributed application instances.',
+    videoUrl: 'https://www.youtube.com/embed/E07D9AjxKsI',
+    thumbnail: '/walkthroughs/distributed-rate-limiter.jpg',
+    duration: '2:00',
+    technologies: [
       'Node.js',
       'Express',
-      'MongoDB',
-    ],
-
-    problem:
-      'I wanted to build a practical solution to a real-world problem.',
-
-    challenge:
-      'The hardest part was connecting the different parts of the application while keeping the user experience simple and reliable.',
-
-    solution:
-      'I broke the application into reusable components and connected the frontend and backend through structured APIs.',
-
-    result:
-      'The result is a working application that demonstrates my ability to take an idea from concept to implementation.',
-
-    liveUrl: 'https://your-live-project.com',
-    githubUrl: 'https://github.com/sam-Adk/project-one',
-  },
-
-  {
-    id: 'project-two',
-    number: '02',
-    title: 'Project Two',
-    shortDescription:
-      'A modern application focused on usability, functionality and clean implementation.',
-    description:
-      'A short technical walkthrough showing the product, development process and key decisions I made while building it.',
-
-    videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
-
-    thumbnail: '/walkthroughs/project-two.jpg',
-
-    duration: '2:00',
-
-    technologies: [
-      'React',
+      'Redis',
+      'Docker',
       'JavaScript',
-      'Tailwind CSS',
-      'Node.js',
+      'Lua',
     ],
-
     problem:
-      'The project started with a specific user problem that needed a simple digital solution.',
-
+      'APIs need to control how frequently clients can make requests. Without effective rate limiting, an API can become vulnerable to abuse, excessive traffic and resource exhaustion.',
     challenge:
-      'The main challenge was turning the initial idea into an interface that was intuitive and technically reliable.',
-
+      'The difficult part was designing rate limiting that remains reliable when multiple application instances are handling requests at the same time. The operations needed to be atomic so concurrent requests could not bypass the limits.',
     solution:
-      'I designed the interface around the main user flow and implemented the functionality using reusable components.',
-
+      'I implemented Token Bucket and Leaky Bucket algorithms and used Redis as the shared state store. Redis scripts perform the critical operations atomically, while Node.js and Express provide the API layer and Docker makes the system easier to run consistently.',
     result:
-      'The finished product combines a responsive interface with practical functionality.',
-
-    liveUrl: 'https://your-live-project.com',
-    githubUrl: 'https://github.com/sam-Adk/project-two',
+      'The project demonstrates how distributed systems concepts can be applied to build infrastructure that protects APIs while remaining predictable under concurrent traffic.',
   },
 
   {
-    id: 'project-three',
+    id: 'collab-canvas',
     number: '03',
-    title: 'Project Three',
+    title: 'Real-Time Collaborative Canvas',
     shortDescription:
-      'A full-stack project demonstrating how I approach product development from idea to implementation.',
+      'A collaborative canvas that allows multiple users to work together on the same digital workspace in real time.',
     description:
-      'A concise walkthrough covering the product, implementation, technical challenges and what I would improve with another iteration.',
-
-    videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
-
-    thumbnail: '/walkthroughs/project-three.jpg',
-
+      'A real-time collaboration project exploring how shared digital workspaces can synchronize user actions and state across connected clients. The project focuses on the core engineering challenges behind collaborative canvas experiences.',
+    videoUrl: 'https://www.youtube.com/embed/aL2n6xaT20Q',
+    thumbnail: '/walkthroughs/collab-canvas.jpg',
     duration: '2:00',
-
     technologies: [
       'React',
       'TypeScript',
+      'Canvas',
+      'WebSockets',
       'Node.js',
-      'MongoDB',
     ],
-
     problem:
-      'I wanted to create a useful product rather than simply build another demonstration project.',
-
+      'Collaborative applications need multiple users to interact with the same workspace while keeping everyone’s view synchronized in real time.',
     challenge:
-      'The biggest challenge was making several parts of the application work together while keeping the codebase maintainable.',
-
+      'The hardest part was dealing with real-time state synchronization. Changes made by one user need to be propagated to other connected users without making the interface feel slow or inconsistent.',
     solution:
-      'I separated the application into logical frontend and backend responsibilities and focused on the core user experience first.',
-
+      'I built the canvas experience around real-time communication and synchronized application state, allowing user interactions to be transmitted between connected clients and reflected on the shared workspace.',
     result:
-      'The finished project gave me practical experience working through the complete development process.',
-
-    liveUrl: 'https://your-live-project.com',
-    githubUrl: 'https://github.com/sam-Adk/project-three',
+      'The result is a real-time collaborative canvas that demonstrates my ability to work with interactive interfaces, shared state and real-time communication rather than only traditional request-response applications.',
   },
 ];
+
