@@ -1,20 +1,22 @@
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
+
 import { HomePage } from './components/ui/pages/HomePage';
 import { AboutPage } from './components/ui/pages/AboutPage';
 import { ProjectsPage } from './components/ui/pages/ProjectsPage';
 import { BlogPage } from './components/ui/pages/BlogPage';
 import { ContactPage } from './components/ui/pages/ContactPage';
+import WalkthroughsPage from './components/ui/pages/WalkthroughsPage';
+import WalkthroughDetailPage from './components/ui/pages/WalkthroughDetailPage';
+
 import { Toaster } from './components/ui/sonner';
-import WalkthroughsPage from "./pages/WalkthroughsPage";
-import WalkthroughDetailPage from "./pages/WalkthroughDetailPage";
 
 export default function App() {
   return (
     <Router>
       <div className="min-h-screen flex flex-col bg-background text-foreground">
-        
+
         <Navigation />
 
         <main className="flex-1">
@@ -22,6 +24,11 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/walkthroughs" element={<WalkthroughsPage />} />
+            <Route
+              path="/walkthroughs/:id"
+              element={<WalkthroughDetailPage />}
+            />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
