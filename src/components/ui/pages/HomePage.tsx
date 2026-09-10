@@ -261,4 +261,95 @@ export function HomePage() {
   );
 }
 
+import { ArrowRight, Play } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { walkthroughs } from "../data/walkthroughData";
+
+
+<section className="px-6 py-24">
+  <div className="mx-auto max-w-6xl">
+
+    <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-600">
+          Featured Walkthroughs
+        </p>
+
+        <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-5xl">
+          See how I build.
+        </h2>
+
+        <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+          Don't just look at screenshots. Watch short walkthroughs of
+          projects I've actually built and see how I approach problems,
+          implementation and product development.
+        </p>
+      </div>
+
+      <button
+        onClick={() => navigate("/walkthroughs")}
+        className="inline-flex items-center gap-2 font-semibold text-slate-900 hover:text-teal-600"
+      >
+        View all walkthroughs
+        <ArrowRight size={18} />
+      </button>
+    </div>
+
+    <div className="mt-12 grid gap-6 md:grid-cols-3">
+      {walkthroughs.map((project) => (
+        <motion.article
+          key={project.id}
+          whileHover={{ y: -6 }}
+          className="group cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+          onClick={() =>
+            navigate(`/walkthroughs/${project.id}`)
+          }
+        >
+          <div className="relative aspect-video overflow-hidden bg-slate-100">
+            <img
+              src={project.thumbnail}
+              alt={project.title}
+              className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            />
+
+            <div className="absolute inset-0 bg-black/20" />
+
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-slate-900 shadow-lg transition group-hover:scale-110">
+                <Play
+                  size={21}
+                  fill="currentColor"
+                  className="ml-1"
+                />
+              </div>
+            </div>
+
+            <span className="absolute bottom-3 right-3 rounded-full bg-black/70 px-3 py-1 text-xs font-medium text-white">
+              {project.duration}
+            </span>
+          </div>
+
+          <div className="p-6">
+            <p className="text-xs font-semibold tracking-widest text-teal-600">
+              {project.number} / WALKTHROUGH
+            </p>
+
+            <h3 className="mt-3 text-xl font-bold">
+              {project.title}
+            </h3>
+
+            <p className="mt-3 line-clamp-2 text-sm leading-6 text-slate-600">
+              {project.shortDescription}
+            </p>
+
+            <div className="mt-5 flex items-center gap-2 text-sm font-semibold">
+              Watch project
+              <ArrowRight size={16} />
+            </div>
+          </div>
+        </motion.article>
+      ))}
+    </div>
+  </div>
+</section>
 
