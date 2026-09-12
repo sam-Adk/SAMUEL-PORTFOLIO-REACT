@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Button } from '../../ui/button';
@@ -12,6 +13,7 @@ import {
   Phone,
   Send,
   Twitter,
+  Loader2,
 } from 'lucide-react';
 import { toast } from 'sonner';
 
@@ -22,16 +24,61 @@ export function ContactPage() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [isSending, setIsSending] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    toast.success("Message sent successfully! I'll get back to you soon.");
+    setIsSending(true);
 
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '99179327-0895-4791-bf4e-7cd2f1a4192c',
+
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+
+          subject: `New Portfolio Contact Message from ${formData.name}`,
+
+          from_name: 'Samuel Adikah Portfolio',
+
+          replyto: formData.email,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success(
+          'Message sent successfully! I’ll get back to you soon.'
+        );
+
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
+      } else {
+        toast.error(
+          'Something went wrong. Please try again or email me directly.'
+        );
+      }
+    } catch (error) {
+      console.error('Contact form error:', error);
+
+      toast.error(
+        'Unable to send your message. Please try again or email me directly.'
+      );
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const handleChange = (
@@ -55,7 +102,7 @@ export function ContactPage() {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      url: 'https://www.linkedin.com/',
+      url: 'https://www.linkedin.com/in/samuel-adikah-50a3a132a',
       color: 'hover:bg-blue-600 hover:text-white',
     },
     {
@@ -160,7 +207,9 @@ export function ContactPage() {
 
                 {/* Name */}
                 <div>
-                  <Label htmlFor="name">Your Name</Label>
+                  <Label htmlFor="name">
+                    Your Name
+                  </Label>
 
                   <Input
                     id="name"
@@ -170,13 +219,16 @@ export function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    disabled={isSending}
                     className="mt-2 rounded-lg border-slate-300 focus:border-teal-500 focus:ring-teal-500"
                   />
                 </div>
 
                 {/* Email */}
                 <div>
-                  <Label htmlFor="email">Email Address</Label>
+                  <Label htmlFor="email">
+                    Email Address
+                  </Label>
 
                   <Input
                     id="email"
@@ -186,13 +238,16 @@ export function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    disabled={isSending}
                     className="mt-2 rounded-lg border-slate-300 focus:border-teal-500 focus:ring-teal-500"
                   />
                 </div>
 
                 {/* Message */}
                 <div>
-                  <Label htmlFor="message">Message</Label>
+                  <Label htmlFor="message">
+                    Message
+                  </Label>
 
                   <Textarea
                     id="message"
@@ -201,18 +256,36 @@ export function ContactPage() {
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    disabled={isSending}
                     rows={6}
                     className="mt-2 rounded-lg border-slate-300 focus:border-teal-500 focus:ring-teal-500 resize-none"
                   />
                 </div>
 
+                {/* Submit */}
                 <Button
                   type="submit"
                   size="lg"
+                  disabled={isSending}
                   className="w-full bg-teal-600 hover:bg-teal-700 text-white rounded-lg"
                 >
-                  <Send size={18} className="mr-2" />
-                  Send Message
+                  {isSending ? (
+                    <>
+                      <Loader2
+                        size={18}
+                        className="mr-2 animate-spin"
+                      />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send
+                        size={18}
+                        className="mr-2"
+                      />
+                      Send Message
+                    </>
+                  )}
                 </Button>
 
               </form>
@@ -235,6 +308,7 @@ export function ContactPage() {
               </h2>
 
               <div className="space-y-4">
+
                 {contactInfo.map((info) => {
                   const Icon = info.icon;
 
@@ -276,6 +350,7 @@ export function ContactPage() {
                     </div>
                   );
                 })}
+
               </div>
             </div>
 
@@ -287,6 +362,7 @@ export function ContactPage() {
               </h3>
 
               <div className="grid grid-cols-2 gap-4">
+
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
 
@@ -303,6 +379,7 @@ export function ContactPage() {
                     </a>
                   );
                 })}
+
               </div>
             </div>
 
@@ -379,3 +456,5 @@ export function ContactPage() {
     </div>
   );
 }
+
+
